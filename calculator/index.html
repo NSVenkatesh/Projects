@@ -3,6 +3,7 @@
     <head>
         <title>Calculator</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/jquery.js"></script>
         <script src="js/script.js"></script>
     </head>
     <body>
@@ -10,35 +11,38 @@
             <div class="cal">
                 <table>
                     <tr>
-                        <td colspan="3"><input type="text" id="result"/></td>
+                        <td colspan="4"><input type="text" id="result"/></td>
                         <td><input type="button" id="reset" value="c" onclick="clr()"></td>
                     </tr>
                     <tr>
                         <td><input type="button" id="num" value="7" onclick="input('7')"></td>
                         <td><input type="button" id="num" value="8" onclick="input('8')"></td>
                         <td><input type="button" id="num" value="9" onclick="input('9')"></td>
-                        <td><input type="button" id="op" value="+" onclick="input('+')"></td>
+                        <td><input type="button" id="op" value="+" onclick="operator('+')"></td>
+                        <td><input type="button" id="op1" value="d" onclick="del()"></td>
                     </tr>
                     <tr>
                         <td><input type="button" id="num" value="4" onclick="input('4')"></td>
                         <td><input type="button" id="num" value="5" onclick="input('5')"></td>
                         <td><input type="button" id="num" value="6" onclick="input('6')"></td>
-                        <td><input type="button" id="op1" value="-" onclick="input('-')"></td>
+                        <td><input type="button" id="op1" value="-" onclick="operator('-')"></td>
+                        <td><input type="button" id="op2" value="%" onclick="operator('%')"></td>
                     </tr>
                     <tr>
                         <td><input type="button" id="num" value="1" onclick="input('1')"></td>
                         <td><input type="button" id="num" value="2" onclick="input('2')"></td>
                         <td><input type="button" id="num" value="3" onclick="input('3')"></td>
-                        <td><input type="button" id="op1" value="*" onclick="input('*')"></td>
+                        <td><input type="button" id="op1" value="*" onclick="operator('*')"></td>
+                        <td rowspan="2"><input type="button" id="equal" value="=" onclick="solve()"></td>
                     </tr>
                     <tr>
                         <td><input type="button" id="num" value="0" onclick="input('0')"></td>
                         <td><input type="button" id="num1" value="." onclick="input('.')"></td>
-                        <td><input type="button" id="op1" value="/" onclick="input('/')"></td>
-                        <td><input type="button" id="equal" value="=" onclick="solve()"></td>
+                        <td><input type="button" id="op1" value="/" onclick="operator('/')"></td>
+                        <td><input type="button" id="op2" value="**" onclick="operator('**')"></td>
                     </tr>
                 </table>
-            </div>
+            </div>     
         </div>
     </body>
 </html>
